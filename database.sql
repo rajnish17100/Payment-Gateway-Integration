@@ -9,3 +9,17 @@ CREATE TABLE `paypage`.`customers` (
 `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+
+#create another table transactions
+
+CREATE TABLE `paypage`.`transactions` (
+  `id` VARCHAR(255) NOT NULL ,
+  `customer_id` VARCHAR(255) NOT NULL ,
+  `product` VARCHAR(255) NOT NULL ,
+  `amount` VARCHAR(255) NOT NULL ,
+  `currency` VARCHAR(255) NOT NULL ,
+  `status` VARCHAR(255) NOT NULL , 
+  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
